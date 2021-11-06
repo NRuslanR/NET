@@ -1,0 +1,56 @@
+{
+    "version": "0.2.0",
+    "configurations": [       
+        {
+            "type": "java",
+            "name": "Java Launch QuickStart Program",
+            "request": "launch",
+            "mainClass": "src.main.java.quickstart.QuickStart",
+            "args": "first second third"
+        },
+        {
+            "name": "C/C++ Test Example Project Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/../C++/Examples/Test/Test",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: Test Example Project Build",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Examples/Console/bin/Debug/net5.0/Console.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Examples/Console",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}
